@@ -1,4 +1,4 @@
-## More Problem solving
+<!-- ## More Problem solving
 
 Remember:
 
@@ -12,7 +12,11 @@ Write a function `calculateCube` that takes a single number and prints the volum
 ```javascript
 console.log(calculateCube(5));
 ```
+const calculateCube = (num) => { 
+    return (num*num*num);
+    }
 
+console.log(calculateCube(5));
 > => 125
 
 
@@ -26,6 +30,26 @@ console.log(isAVowel("a"));
 
 > => true
 
+function isVowel(argument){
+var text;
+var argument = argument.toLowerCase();
+var vowels = (['a', 'e', 'i', 'o', 'u']);
+for (var i = 0; i <= vowels.length; i++){
+if (argument != vowels[i]) {
+continue;
+        }
+return true;
+    }
+return false;
+}
+
+var char = "a";
+if (isVowel(char)) {
+console.log(char + " true" +" is a vowel");
+} else {
+console.log(char + " is not a vowel");
+}
+
 
 # 3
 ## Get Two Lengths
@@ -34,6 +58,9 @@ Write a function `getTwoLengths` that accepts two parameters (strings). The func
 ```javascript
 console.log(getTwoLengths("Hank", "Hippopopalous"));
 ```
+const getTwoLengths = ( str1 , str2 ) => {
+    return [ str1.length , str2.length ];
+}
 
 > => [4, 13]
 
@@ -47,8 +74,15 @@ Write a function `getMultipleLengths` that accepts a single parameter as an argu
 ```javascript
 console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 ```
-
-> => [5, 4, 2, 2, 4]
+const getMultipleLengths = ( arrayOfStrings ) => {
+    const lengths = [];
+    for ( let j = 0; j < arrayOfStrings.length; j++ ){
+        lengths.push( arrayOfStrings[j].length );
+      }
+      return lengths;
+}
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
+> => [5, 4, 2, 2, 4] -->
 
 
 # 5
@@ -58,7 +92,10 @@ Define a function `maxOfThree` that takes three numbers as arguments and returns
 ```javascript
 console.log(maxOfThree(6, 9, 1));
 ```
-
+const maxofThree = ( a, b, c ) => {
+   return Math.max ( a, b, c );
+}
+console.log(maxofThree(6, 9, 1));
 > => 9
 
 
@@ -70,6 +107,17 @@ Write a function `printLongestWord` that accepts a single argument, an **array o
 ```javascript
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
 ```
+
+const printLongestWord = function( arr )  {
+  let long = '';
+  for ( var i = 0; i < arr.length; i ++ ){
+    if ( arr[i].length > long.length ){
+      long = arr[i];
+    }
+  }
+  return long;
+}
+console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "blob"]));
 
 > => "Peanutbutter"
 
@@ -86,13 +134,20 @@ power of 2` is 225.
 ```javascript
 console.log(transmogrify(5, 3, 2));
 ```
-
+const transmogrify = function( n1 , n2 , n3)  => {
+  return ( n1 * n2 ) ** n3;
+}
+console.log(transmogrify(5, 3, 2));
 > => 225
 
 <br>
 <hr>
 
-# 8
+
+
+
+
+<!-- # 8
 ## Project Euler Problem 2
 [Project Euler problem #2](https://projecteuler.net/problem=2)
 
@@ -123,4 +178,4 @@ After your function finds the needle it should return a message (as a string) th
 
 Should return:
 
-`"found the needle at position 5"`
+`"found the needle at position 5"` -->
